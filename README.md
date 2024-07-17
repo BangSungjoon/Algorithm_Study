@@ -32,13 +32,13 @@ HGD <br>
 　　　　└─ sol2.py (optional) <br>
 　　└─ 1202 <br>
 　　　　├─ README.md <br> 
-　　　　├─ sample_input.txt <br>
-　　　　├─ sample_output.txt <br>
+　　　　├─ input.txt <br>
+　　　　├─ output.txt <br>
 　　　　└─ sol1.py <br>
 　　└─ 1203 <br>
 　　　　├─ README.md <br> 
-　　　　├─ sample_input.txt <br>
-　　　　├─ sample_output.txt <br>
+　　　　├─ input.txt <br>
+　　　　├─ output.txt <br>
 　　　　└─ sol1.py <br>
 └─ week02 <br>
 　　├─ 1204 <br>
