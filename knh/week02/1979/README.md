@@ -26,7 +26,10 @@
 
 → 너무 고려해야할 조건이 많아짐
 ### 문제 풀이
-step 1 . 가로 / 세로 한 줄을 string 형태로 변환
+step 1 . 가로 / 세로 한 줄을(list) string 형태로 변환
 step 2 . 0을 기준으로 `.split()`
 step 3 . `.split()`으로 인해 생성된 list를 for문 돌리기
 step 4 . list 안 요소의 길이가 K와 같은지 판별 → 같다면 `answer += 1`
+
+## sol 2
+string 말고 list를 그대로 사용해보자 !
