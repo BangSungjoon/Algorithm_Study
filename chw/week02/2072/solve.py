@@ -1,9 +1,7 @@
 import sys
-
 sys.stdin = open('input.txt')
 
 T = int(input())
-# number_list = [list(map(int, input().split())) for t in range(T)]
 
 for t in range(T):
     sum_odd = 0
