@@ -7,6 +7,7 @@
 #[start:end:step] 형식에서 step을 -1로 주면 역순이 된다.
 #map() 함수: map(int, input().split())와 같이 주어진 함수를 반복 가능한 객체의 모든 요소에 적용
 #join() 메서드: 하나로 결합
+#1961
 
 import sys
 sys.stdin = open("input.txt", "r")
