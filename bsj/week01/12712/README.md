@@ -47,8 +47,6 @@ for test_case in range(1, T + 1):
     print(f'#{test_case} {Max_sum}')
 ```
 
-![1000003296.jpg](../../image/note1.jpg)
-
 +방향으로 잡거나, x방향으로 잡을 때 많이 잡는 경우를 구하는 문제
 
 ### 난관 1.
