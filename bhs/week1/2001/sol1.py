@@ -1,5 +1,3 @@
-text=auto
-
 
 import sys
 sys.stdin = open('input.txt', 'r')
