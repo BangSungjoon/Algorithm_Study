@@ -37,9 +37,9 @@ for tc in range(1, T+1):
         row = list(map(int, input().split()))   # 테스트 케이스의 1개 열
         lst_group.append(row)                   # 1개 열을 리스트에 담기
 
-        sc = words_repetition(row, K)      # K개의 빈 공간이 연속으로 있다면
+        sc = words_repetition(row, K)           # K개의 빈 공간이 연속으로 있다면
         success_case = success_case + sc        # 성공 케이스 숫자 + 1
     for line in zip(*lst_group):                # 열별로 담은 리스트를 행으로 변환
-        sc = words_repetition(line, K)       # K개의 빈 공간이 연속으로 있다면
+        sc = words_repetition(line, K)          # K개의 빈 공간이 연속으로 있다면
         success_case = success_case + sc        # 성공 케이스 숫자 + 1
-    print(f'#{tc} {success_case}')
+    print(f'#{tc} {success_case}')              
