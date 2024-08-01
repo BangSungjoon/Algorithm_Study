@@ -14,9 +14,17 @@ for tc in range(1, T+1):
         if command[0] == 1:  # 가속
             velocity += command[1]
         elif command[0] == 2:  # 감속
-              '''
-              생각 더하기. 현재 속도보다 감속할 속도가 더 클 경우 속도는 0m/s가 된다. 
-              '''
+              
+            if velocity < command[1]:
+                velocity = 0
+            '''
+            생각 더하기. 현재 속도보다 감속할 속도가 더 클 경우 속도는 0m/s가 된다. 
+            if velocity < command[1]:
+                velocity = 0
+            
+            max(0, command[1] - velocity)
+
+            '''
 
 
         # 현재 속도로 1초간 이동한 거리를 더함
