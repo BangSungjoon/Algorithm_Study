@@ -33,7 +33,7 @@ for tc in range(1, T+1):
             print(f'#{tc} 1')
         
     
-
+# 잘못된 풀이
 
 # def possible_case(s, k):
 #     possibility = [s]
