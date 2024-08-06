@@ -16,7 +16,7 @@ for tc in range(1, T+1):
         sum_ss = 0
         for s in ss:
             sum_ss += s
-            
+        # 길이와 합 검사    
         if len(ss) == N and sum_ss == K:
             cnt += 1
 
