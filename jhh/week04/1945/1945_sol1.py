@@ -13,6 +13,7 @@ for tc in range(1, T+1):
         return count_num
  
     under_lst = [2, 3, 5, 7, 11]
+    
     print(f'#{tc}', end=' ')
     for num in under_lst:
         print(seperate(N, num), end=' ')
