@@ -10,7 +10,6 @@ sys.stdin = open('input.txt')
 #     subsets.append(subsets[y]+[num])
 # print(subsets)      # [[], [1], [2], [1, 2], [3], [1, 3], [2, 3], [1, 2, 3]]
 
-
 A = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
 subsets = [[]]
 for num in A:
