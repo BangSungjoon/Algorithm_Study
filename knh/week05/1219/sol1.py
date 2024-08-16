@@ -1,35 +1,50 @@
-# [D3] 1219 전기버스
+# [D4] 1219 길찾기
 
-T = int(input())
+import sys
+sys.stdin = open('input.txt', 'r')
 
-for t in range(1, T+1):
-    # 입력 받기
-    K, N, M = map(int, input().split())     # K : 한번 충전할 때 갈 수 있는 거리, N : 총 길이, M : 정류장 위치
-    stop = list(map(int, input().split()))    # 버스 정류장 위치 저장 변수
+# start 노드에서 end 노드로 갈 수 있는지 알려주는 함수
+def search(start, end, V):
+    stack = [start]     # 노드를 탐색하면서 사용할 스택
+    visited = [0] * (V+1)
+    
+    while stack:    # 스택에 숫자가 남아있는 동안
+        # if end in stack:          # end 노드에 도달했다면
+        #     find = 1
+        #     break
 
-    # 사용할 변수
-    move = K        # 현재 이동할 수 있는 거리 저장 변수
-    position = 0    # 현재 위치 저장 변수
-    stop_idx = 0    # 버스 정류장 위치 리스트를 탐색할 때 사용할 인덱스
-    cnt = 0         # 충전 회수 저장 변수
+        current = stack.pop()       # 현재 조사할 노드
 
-    # 길 끝까지 도착할 때까지 탐색
-    while position < N+1:
-        if position == stop[stop_idx]:  # 지금 위치에 정류장이 있다면
-            if stop_idx == len(stop) -1:    # 마지막 정류장이라면
-                if N - position > move:     # 끝까지 갈 수 없는 상황이라면
-                    move = K   # 충전해라
-                    cnt += 1    # 충전횟수 늘려라
-            elif move == 0 or stop[stop_idx+1] - position > move: # 더 이상 갈 수 없거나, 다음 정류장까지 갈 수 없는 상태면
-                move = K   # 충전해라
-                cnt += 1    # 충전횟수 늘려라
-            if stop_idx+1 < len(stop):  # stop 마지막까지 탐색한게 아니면
-                stop_idx+=1             # stop_idx 증가
-        if move == 0 and position != N:    # 더 이상 진행할 수 없고 끝까지 온게 아니라면
-            cnt = 0
+        if current == end:          # end 노드에 도달했다면
+            find = 1
             break
-        position += 1  # 다음 칸으로 이동
-        move -= 1  # 연료 하나 닳게
 
-    # 출력
-    print(f'#{t} {cnt}')
+        if visited[current] == 0:       # 방문하지 않은 노드라면
+            visited[current] = 1        # 방문 표기
+            for next in range(V, -1, -1):     # 현재 노드에서 갈 수 있는 다음 노드 찾기
+                if adj_matrix[current][next] == 1 and visited[next] == 0:  # 현재 노드에서 연결되어있는 노드 찾기
+                    stack.append(next)
+    else:   # break에 걸리지 않았다면
+        find = 0
+    
+    return find
+    
+
+for t in range(10):
+    # T : 테스트케이스 번호
+    # N : 간선 수
+    T, N = map(int, input().split())
+
+    data = list(map(int, input().split())) # 노선 정보 저장한 리스트
+
+    # 인접행렬 만들기
+    adj_matrix = [[0]*100 for _ in range(100)]
+
+    for i in range(N):
+        v1 = data[i*2]
+        v2 = data[i*2 + 1]
+        adj_matrix[v1][v2] = 1
+
+    print(f'#{T} {search(0, 99, 99)}')
+    # for arr in adj_matrix:
+    #     print(arr)
