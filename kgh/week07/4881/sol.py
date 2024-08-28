@@ -18,7 +18,7 @@ def backtrack(row, current_sum):
             backtrack(row+1, current_sum + arr[row][col])
             visited[col] = False  # 백트래킹 위해 초기화화
 
-# 실행
+# 실행하기
 import sys
 sys.stdin = open('input.txt', 'r')
 
