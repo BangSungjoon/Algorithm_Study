@@ -20,7 +20,7 @@ for test_case in range(1, T+1):
     N = int(input())    # 배열의 사이즈 NxN 배열
     arr = [list(map(int, input().split())) for _ in range(N)]
     visited = [0]*N     # 방문 기록 배열
-    min_sum = 101       # 배열의 최솟값
+    min_sum = 91       # 배열의 최솟값 (91을 넘길 수 없다.)
     arr_sum(0, N, 0)    # 더한 횟수는 0에서 시작, 배열의 크기 N, 현재까지 더해진 값 0
 
     print(f'#{test_case} {min_sum}')
