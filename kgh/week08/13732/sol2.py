@@ -10,7 +10,7 @@ for tc in range(1, T+1):
     positions = [(i, j) for i in range(N) for j in range(N) if arr[i][j] == '#']
 
     # #의 시작점과 끝점 찾기
-    start_i, end_i = min(pos[0] for pos in positions)
+    start_i = min(pos[0] for pos in positions)
     end_i = max(pos[0] for pos in positions)
     start_j = min(pos[1] for pos in positions)
     end_j = max(pos[1] for pos in positions)
