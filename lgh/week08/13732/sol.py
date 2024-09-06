@@ -38,13 +38,12 @@ for tc in range(1, T+1):
             break
     # 정사각형 확인하기(가로와 세로길이 같은 지, 시작좌표부터 끝좌표까지 다 #으로 채워졌는 지)
     if (end_x - start_x) == (end_y - start_y): #가로와 세로 길이 같은 지
-        for i in range(start_x, end_y+1):  # 가로와 세로 길이 같다면 시작좌표부터 끝좌표까지 순회하며 #의 개수 세줌
+        for i in range(start_x, end_x+1):  # 가로와 세로 길이 같다면 시작좌표부터 끝좌표까지 순회하며 #의 개수 세줌
             for j in range(start_y, end_y+1):
                 if arr[i][j] == '#':
                     count += 1
-        if count == (end_x - start_x) ** 2: #개수가 제곱수라면 정사각형
+        if count == (end_x - start_x + 1) ** 2: #개수가 제곱수라면 정사각형
             ans = 'yes'
 
     print(f'#{tc} {ans}')
 
-    #틀림 고쳐야함.....
