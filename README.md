@@ -15,7 +15,7 @@
     - ex) [SEA] 1207 / d2 / 2H / 홍길동
 3. 플랫폼 작성법 통일
     * [BOJ] - 백준 
-    * [PGS] - 프로그래머스
+    * [PGM] - 프로그래머스
     * [SEA] - 삼성SW Expert Academy
     * [ETC] - 그외
 
