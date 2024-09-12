@@ -47,3 +47,4 @@ str1 = 'FRANCE'
 str2 = 'french'
 res = solution(str1, str2)
 print(res)
+
