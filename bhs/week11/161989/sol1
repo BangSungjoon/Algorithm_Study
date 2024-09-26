@@ -1,0 +1,10 @@
+def solution(n, m, section):
+    count = 0  
+    painted = 0  
+    
+    for i in section:
+        if i > painted:
+            count += 1
+            painted = i + m - 1     # i구역을 포함하여 m칸을 칠했기때문에 -1을 해야함
+    
+    return count
