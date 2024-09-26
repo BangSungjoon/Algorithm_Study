@@ -1,0 +1,10 @@
+def solution(name, yearning, photo):
+    missing_dict = dict(zip(name, yearning))
+    
+    result = []
+    
+    for people in photo:
+        score = sum(missing_dict.get(person, 0) for person in people)
+        result.append(score)
+    
+    return result
