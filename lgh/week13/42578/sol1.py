@@ -1,4 +1,4 @@
-# 42578 의상
+#42578 의상
 def solution(clothes):
     answer = 1
 
