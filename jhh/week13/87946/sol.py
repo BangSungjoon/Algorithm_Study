@@ -15,3 +15,5 @@ def solution(k, dungeons):
                     max_num = max(max_num, cnt)
                     break
     return max_num
+
+# 생각은 순열로 해놓고 조합을 import 해버렸따 우헤헤
