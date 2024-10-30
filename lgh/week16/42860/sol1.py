@@ -16,4 +16,8 @@ def solution(name):
     answer =  alphabet_change + cursor_move
     return answer
 
+names = ["JEROEN", "JAN"]
+for name in names:
+    print(solution(name))
+
 
