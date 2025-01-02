@@ -1,0 +1,28 @@
+# 인덱스로만 풀랬는데 스택으로 문제를 풀어보려고 한다.
+# 커서를 기준으로 왼쪽에 스택, 오른쪽에도 스택을 쌓아 명령이 다 끝나면 두 스택을 합친다.
+
+import sys
+
+string1 = list(sys.stdin.readline().rstrip())                                        # 초기 문자리스트
+string2 = []
+
+for _ in range(int(sys.stdin.readline())):
+    command = list(sys.stdin.readline().split())                                     # 명령어 리스트
+    if command[0] == 'L':                                                            # 커서 왼쪽 이동
+        if string1:                                                                  # string1이 비어있지 않으면
+            string2.append(string1.pop())                                            # string1의 마지막 문자를 string2로 이동
+    
+    elif command[0] == 'D':                                                          # 커서 오른쪽 이동
+        if string2:                                                                  # string2가 비어있지 않으면
+            string1.append(string2.pop())                                            # string2의 마지막 문자를 string1으로 이동
+    
+    elif command[0] == 'B':                                                          # 백스페이스
+        if string1:                                                                  # string1이 비어있지 않으면
+            string1.pop()                                                            # string1의 마지막 문자 삭제
+    
+    else:                                                                            # P 명령어일 때
+        string1.append(command[1])                                                   # command[1]의 문자를 string1에 추가
+
+                                                                                     # string2를 뒤집어서 합쳐주기
+string1.extend(reversed(string2))  
+print(''.join(string1))
