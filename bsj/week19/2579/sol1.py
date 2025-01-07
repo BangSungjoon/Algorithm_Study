@@ -29,7 +29,7 @@ def dfs(idx, score, before):
 
 n = int(input())    # 계단의 개수
 floor = [0]*n       # 계단
-for i in range(n):
+for i in range(n):  # 계단 점수 채우기
     floor[i] = int(input())
 result = 0          # 총 점수의 최댓값
 back_floor= [0]*n
