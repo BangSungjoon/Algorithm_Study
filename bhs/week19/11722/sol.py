@@ -14,4 +14,4 @@ print(max(sooyeol))
 
 # 그냥 작은 수를 찾는 수열
 # list index out of range [0]*n
-# 기존 수열에 더하는 거니까 sooyeol[j]+1 해야함.
+# 기존 수열에 더하는 거니까 sooyeol[j]+1 해야함
