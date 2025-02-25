@@ -8,7 +8,7 @@ for i in range(n):
     idx = val[input_idx]
 
     while stack and val[stack[-1]] < idx:   #스택에 뭐가 있고, 스택에 top값의 인덱스가 더 오른쪽이 될때까지
-        nge[stack.pop()] = val
+        nge[stack.pop()] = idx
 
     stack.append(input_idx)
 
