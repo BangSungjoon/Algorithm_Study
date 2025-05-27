@@ -1,0 +1,5 @@
+# IDEA 설정 파일 무시
+.idea/
+
+# 커밋 메시지 템플릿 무시
+.gitmessage.txt
