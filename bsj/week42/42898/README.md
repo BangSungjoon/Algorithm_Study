@@ -1,0 +1,6 @@
+- dp 배열
+    - 그 지점까지 올 수 있는 최단 경로의 수
+    - 왼쪽 좌표와 오른쪽 좌표 값을 더해주면 된다. `dp[i][j] = dp[i][left] + dp[up][j]`
+- puddles
+    - puddles 배열이 (x, y) 순서로 주어지기 때문에 주의해야 한다. `if (j, i) in puddle_set:`
+    - 물웅덩이의 경우 피해가기 위해 puddles 배열 안에 있는지 검사할 때 `in`을 사용하므로 효율적인 탐색을 위해 set으로 바꿔준다. `puddle_set = set((x, y) for x, y in puddles)`
